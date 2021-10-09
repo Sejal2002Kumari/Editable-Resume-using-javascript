@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="educationStyle.css">
+    </head>
+    <body>
+    <div class="tblForm">
+
+        <form>
+            <table class="volTable">
+            <thead>
+                <tr>
+                    <th><span class="spn">EDUCATION</span></th>
+                    <th colspan="2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Institute:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="inst" placeholder="Example: xyz university"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">URL:</label></div>
+                        <div class="inpOrg"><input type="text"   class="commanClassForInput" id="urlll" placeholder="www.example.com"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Area:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="area" placeholder="Software developer"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Study Type:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="studyType" placeholder="Bachelor"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Start Date:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="startDt" placeholder="yyyy-mm-dd"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">End Date:</label></div>
+                        <div class="inpOrg"><input type="text"  class="commanClassForInput" id="endDt" placeholder="yyyy-mm-dd"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Score:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="skor" placeholder="5.0"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+          
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Courses:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="courses" placeholder="Python"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                 <tr>
+                    <td><button type="submit" id="btn" onclick="updateEducationForm(event)">ADD</button></td>
+                    <td colspan="2"></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </form>
+</div>
+    <script>
+      function updateEducationForm(e){
+        e.preventDefault()
+     var exp =    {
+        
+      "institution": document.getElementById('inst').value,
+      "url":  document.getElementById('urlll').value,
+      "area":  document.getElementById('area').value,
+      "studyType":  document.getElementById('studyType').value,
+      "startDate": document.getElementById('startDt').value,
+      "endDate":  document.getElementById('endDt').value,
+      "score":  document.getElementById('skor').value,
+      "courses":  document.getElementById('courses').value,
+
+    };
+     window.opener.addEducation(exp);
+     window.close();
+    }
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!--  -->

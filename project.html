@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <div id="formTitle">
+      <h2>ADD PROJECTS</h2>
+    </div>
+    <div id="bigContainer">
+      <form>
+        <section class="projectName">
+          <div class="commanSpanForName"><span>Project Name</span></div>
+          <input
+            type="text"
+            required="required"
+            placeholder="Project Name"
+            class="inputProjectName"
+          />
+        </section>
+        <section class="projectName">
+          <div class="commanSpanForName"><span>Description</span></div>
+
+          <input
+            type="text"
+            required="required"
+            placeholder="Description"
+            class="inputProjectName"
+          />
+        </section>
+        <section class="projectName">
+          <div class="commanSpanForName"><span>Highlights</span></div>
+          <input
+            type="text"
+            required="required"
+            placeholder="Highlights"
+            class="inputProjectName"
+          />
+        </section>
+        <section class="projectName">
+          <div class="commanSpanForName"><span>Keywords</span></div>
+          <input
+            type="text"
+            required="required"
+            placeholder="Keywords"
+            class="inputProjectName"
+          />
+        </section>
+        <section class="projectName">
+          <div class="commanSpanForName"><span>Start Date</span></div>
+          <input
+            type="text"
+            required="required"
+            placeholder="Start Date"
+            class="inputProjectName"
+          />
+        </section>
+        <section class="projectName">
+          <div class="commanSpanForName"><span>End Date</span></div>
+
+          <input
+            type="text"
+            required="required"
+            placeholder="End Date"
+            class="inputProjectName"
+          />
+        </section>
+        <section class="projectName">
+          <div class="commanSpanForName"><span>URL</span></div>
+          <input
+            type="text"
+            required="required"
+            placeholder="Url"
+            class="inputProjectName"
+          />
+        </section>
+        <section class="projectName">
+          <div class="commanSpanForName"><span>Roles</span></div>
+          <input
+            type="text"
+            required="required"
+            placeholder="Roles"
+            class="inputProjectName"
+          />
+        </section>
+        <section class="projectName">
+          <div class="commanSpanForName"><span>Entity</span></div>
+          <input
+            type="text"
+            required="required"
+            placeholder="Entity"
+            class="inputProjectName"
+          />
+        </section>
+        <section class="projectName">
+          <div class="commanSpanForName"><span>Type</span></div>
+
+          <input
+            type="text"
+            required="required"
+            placeholder="Application"
+            class="inputProjectName"
+          />
+        </section>
+        <section class="projectName" id="idOfSubmitButton">
+          <button
+            type="submit"
+            id="submitButton"
+            onclick="updateProjectForm(event)"
+          >
+            ADD
+          </button>
+        </section>
+      </form>
+    </div>
+    <script>
+      function updateProjectForm(e) {
+        e.preventDefault();
+        var exp = {
+          name: document.getElementsByClassName("inputProjectName")[0].value,
+          description:
+            document.getElementsByClassName("inputProjectName")[1].value,
+          highlights:
+            document.getElementsByClassName("inputProjectName")[2].value,
+          keywords:
+            document.getElementsByClassName("inputProjectName")[3].value,
+          startDate:
+            document.getElementsByClassName("inputProjectName")[4].value,
+          endDate: document.getElementsByClassName("inputProjectName")[5].value,
+          url: document.getElementsByClassName("inputProjectName")[6].value,
+          roles: document.getElementsByClassName("inputProjectName")[7].value,
+          entity: document.getElementsByClassName("inputProjectName")[8].value,
+          type: document.getElementsByClassName("inputProjectName")[9].value,
+        };
+        window.opener.addProjectForm(exp);
+        window.close();
+      }
+    </script>
+  </body>
+</html>

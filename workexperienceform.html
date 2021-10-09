@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-WorkExperience</title>
+    <link rel="stylesheet" href="formstyle.css" />
+  </head>
+  <body>
+    <div id="bigDiv">
+      <div id="formDiv">
+        <div class="regForm">
+          <h1>WORK EXPRIENCE FORM</h1>
+        </div>
+        <form>
+          <div id="name">
+            <div class="FIRSTNAME">
+              <label class="firstlabel" for="fname">First Name:</label>
+              <input
+                type="text"
+                name="first_name"
+                id="fname"
+                class="firstname"
+              />
+            </div>
+            <div class="LASTNAME">
+              <label class="lastlabel" for="lname">Last Name:</label>
+              <input type="text" name="last_name" id="lname" class="lastname" />
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="companyName">
+            <label for="companyName"> Company Name: </label>
+            <input type="text" id="companyName" />
+          </div>
+          <div class="positionName">
+            <label for="position"> Position: </label>
+            <select name="position" id="position">
+              <option value="choose">--Choose Option--</option>
+              <option value="chairman">Chairman</option>
+              <option value="ceo">CEO</option>
+              <option value="director">Director</option>
+              <option value="employee">Employee</option>
+              <option value="manager">Manager</option>
+              <option value="president">President</option>
+              <option value="vicepresident">Vice-President</option>
+            </select>
+          </div>
+          <div class="urlName">
+            <label for="url">Enter URL:</label>
+            <input type="url" name="url" id="url" />
+          </div>
+          <div class="dateName">
+            <div class="firstdate">
+              <label for="startDate"> Start Date: </label>
+              <input type="date" id="startDate" />
+            </div>
+            <div class="lastdate">
+              <label for="lastDate"> End Date: </label>
+              <input type="date" id="lastDate" />
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="summaryName">
+            <label for="summary"> Summary: </label>
+
+            <textarea
+              name="summary"
+              id="summary"
+              cols="100"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="highlightNmae">
+            <label for="highlights"> Highlights: </label>
+
+            <textarea
+              name="highlights"
+              id="highlights"
+              cols="99"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="button">
+            <button type="submit" onclick="updatWorkExprience(event)">
+              SUBMIT
+            </button>
+            <button type="reset">CLEAR</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function updatWorkExprience(e) {
+        e.preventDefault();
+        var exp = {
+          name: document.getElementById("companyName").value,
+          position: document.getElementById("position").value,
+          url: document.getElementById("url").value,
+          startDate: document.getElementById("startDate").value,
+          endDate: document.getElementById("lastDate").value,
+          summary: document.getElementById("summary").value,
+          highlights: document.getElementById("highlights").value,
+        };
+        window.opener.addWorkExprience(exp);
+        window.close();
+      }
+    </script>
+  </body>
+</html>
+
+<!-- table - no form
+ul li - form -->

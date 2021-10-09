@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="volStyle.css">
+    </head>
+    <body>
+    <div class="tblForm">
+
+        <form>
+            <table class="volTable">
+            <thead>
+                <tr>
+                    <th><span class="spn">VOLUNTEER</span></th>
+                    <th colspan="2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Organisation:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="org" placeholder="Example: Google"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Position:</label></div>
+                        <div class="inpOrg"><input type="text"   class="commanClassForInput" id="pos" placeholder="example:vice president"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Url:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="urll" placeholder="www.xyz.com"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Start Date:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="sDate" placeholder="yyyy-mm-dd"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">End Date:</label></div>
+                        <div class="inpOrg"><input type="text"  class="commanClassForInput" id="eDate" placeholder="yyyy-mm-dd"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Summary:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="smry" placeholder="Description"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+          
+                <tr>
+                    <td>
+                        <div class="comman"><label for="org">Highlights:</label></div>
+                        <div class="inpOrg"><input type="text" class="commanClassForInput" id="hilit" placeholder="Highlights"></div>
+                        <div class="clear"></div>
+                    </td>
+                </tr>
+                 <tr>
+                    <td><button type="submit" id="btn" onclick="updateVolunteer(event)">ADD</button></td>
+                    <td colspan="2"></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </form>
+</div>
+    <script>
+      function updateVolunteer(e){
+        e.preventDefault()
+     var exp =    {
+     
+      "organization": document.getElementById('org').value,
+      "position": document.getElementById('pos').value,
+      "url": document.getElementById('urll').value,
+      "startDate": document.getElementById('sDate').value,
+      "endDate": document.getElementById('eDate').value,
+      "summary": document.getElementById('smry').value,
+      "highlights": document.getElementById('hilit').value
+    
+    };
+     window.opener.addVolunteer(exp);
+     window.close();
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#backgroundOfMainContainer {
+  background-color: whitesmoke;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+#mainContainer {
+  width: 595px;
+  /* height: 2244px; */
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#divMainContainer {
+  width: 90%;
+  margin: 2.5rem auto;
+
+  /* height: 90%; */
+  border: 2px solid goldenrod;
+}
+#hdrOfResume {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 80px;
+}
+#secdetailsOfPerson {
+  float: left;
+  width: 40%;
+  /* background-color: aquamarine; */
+  text-align: center;
+}
+img {
+  margin-top: 20px;
+  width: 100px;
+  height: 110px;
+}
+#adrsOfPerson {
+  text-align: left;
+  font-size: small;
+  margin-top: 10px;
+  padding-left: 60px;
+}
+#secSocialLinks {
+  float: right;
+  /* background-color: aquamarine; */
+  width: 40%;
+  font-size: smaller;
+  margin-top: 214px;
+}
+#personInformation {
+  /* background-color: blue; */
+  width: 100%;
+  height: 266px;
+  font-size: small;
+}
+#clear {
+  clear: both;
+}
+#secWorkExperience {
+  width: 90%;
+  margin: auto;
+  /* background-color: blueviolet; */
+  border: 2px solid goldenrod;
+}
+#secWorkExperience h2 {
+  background-color: goldenrod;
+}
+.spnBtnAdd{
+  padding: 0px 7px;
+  border: 2px solid #9420fe;
+  font-size: 19px;
+  border-radius: 4px;
+  float: right;
+  font-weight: bolder;
+  color: #9420fe;
+  cursor: pointer;
+}
+
+#secWorkExperience ul {
+  margin-left: 60px;
+  font-size: small;
+}
+#secAwards {
+  border: 2px solid goldenrod;
+  width: 90%;
+  margin: auto;
+}
+#secAwards h2 {
+  background-color: goldenrod;
+}
+#tblAwards {
+  width: 100%;
+  /* border: 2px solid goldenrod; */
+}
+#tblAwards td {
+  border: 2px solid goldenrod;
+}
+.secVol {
+  width: 90%;
+  margin: auto;
+  border: 2px solid goldenrod;
+}
+.secVol h2 {
+  background-color: goldenrod;
+}
+.secVol ul {
+  margin-left: 60px;
+  font-size: small;
+  list-style: square;
+}
+#secPublication {
+  width: 90%;
+  margin: auto;
+  border: 2px solid goldenrod;
+}
+#secPublication h2 {
+  background-color: goldenrod;
+}
+#tblPublication {
+  width: 100%;
+  font-size: 14px;
+}
+
+#tblPublication th {
+  border: 2px solid goldenrod;
+}
+#tblPublication td {
+  border: 2px solid goldenrod;
+}
+.secSkill {
+  width: 90%;
+  margin: auto;
+  border: 2px solid goldenrod;
+}
+.secSkill table {
+  width: 100%;
+}
+.secSkill h2 {
+  background-color: goldenrod;
+  /* color: white; */
+}
+.secSkill th {
+  border: 2px solid goldenrod;
+}
+.secSkill td {
+  border: 2px solid goldenrod;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
